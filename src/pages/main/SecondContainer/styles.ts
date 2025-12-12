@@ -129,6 +129,9 @@ export const BoxContainer = styled.div`
   @media (max-width: 600px) {
     width: 400px;
   }
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `;
 export const Box = styled.div`
   border-radius: 12px;
@@ -144,6 +147,9 @@ export const Number = styled.h1`
   line-height: 120%;
   color: ${colors.white};
   font-weight: bold;
+  @media (max-width: 400px) {
+    font-size: 40px;
+  }
 `;
 export const Label = styled.p`
   font-size: 16px;
