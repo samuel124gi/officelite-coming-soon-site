@@ -67,7 +67,13 @@ const lists = [
 import BackgroundImage from "../../../assets/icons/bg-pattern-footer.svg";
 import { StyledButton } from "../../../components/Button/styles";
 import Button from "../../../components/Button";
+import { useNavigate } from "react-router-dom";
+
 const SecondContainer = () => {
+  const navigate = useNavigate();
+  function handleSignIn() {
+    navigate("./sign-in");
+  }
   return (
     <MainContainer>
       <BackgroundContainer>
@@ -111,7 +117,9 @@ const SecondContainer = () => {
                 })}
               </BoxContainer>
             </LeftContainer>
-            <StyledButton variant="tertiary">Get Started</StyledButton>
+            <StyledButton variant="primary" onClick={handleSignIn}>
+              Get Started
+            </StyledButton>
           </BottomContainer>
         </InnerContainer>
       </BackgroundContainer>

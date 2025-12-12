@@ -34,4 +34,5 @@ export const StyledButton = styled.button<{ variant: ButtonVariant }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 11;
 `;

@@ -26,6 +26,7 @@ import {
 import Logo from "../../assets/icons/logo.svg";
 import BackgroundImage from "../../assets/icons/bg-pattern-side.svg";
 import Button from "../../components/Button";
+import { useNavigate } from "react-router-dom";
 const lists = [
   {
     number: 47,
@@ -53,6 +54,11 @@ const formItems = [
   "Company",
 ];
 const SignUp = () => {
+  const navigate = useNavigate();
+  function handleHome() {
+    alert("You will recieve updates soon");
+    navigate("/");
+  }
   return (
     <MainContainer>
       <InnerContainer>
@@ -98,7 +104,9 @@ const SignUp = () => {
                   );
                 })}
               </FormContainer>
-              <Button variant="tertiary">Get on the list</Button>
+              <Button variant="tertiary" onClick={handleHome}>
+                Get on the list
+              </Button>
             </Form>
           </Container>
         </MainInnerContainer>
